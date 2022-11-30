@@ -4,21 +4,87 @@
     box-sizing: border-box;
 }
 
+/* General */
+
 .background-header {
     background-color: #009688;
-    height: 15vh;
+    height: 18vh;
     position: relative;
 }
 
 .background-main {
     background-color: #d8dbd5;
-    height: 85vh;
+    height: 82vh;
     position: relative;
 }
 
 .chat-app {
     background-color: white;
-    height: 90vh;
+    height: 82vh;
     position: relative;
     top: -10vh;
 }
+
+/* Sidebar */
+
+.sidebar-app {
+    height: 82vh;
+    background-color: white;
+}
+
+.header-app {
+    height: 7vh;
+    background-color: #eaeaea;
+}
+
+.notification {
+    height: 8vh;
+    background-color: #8edafc;
+}
+
+.search-bar {
+    height: 5vh;
+    background-color: #fafafa;
+}
+
+.search-icon {
+    width: 80px;
+    background-color: white;
+    padding: 10px;
+    color: #b6b9bb;
+    display: flex;
+    justify-content: center;
+}
+
+/* Chat */
+.conversation {
+    height: 68vh;
+    background-image: url(img/mine.jpg);
+}
+
+.nav-chat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7vh;
+    background-color: #f3eeea;
+    font-size: 1.8rem;
+    color: #6b7376;
+}
+
+    .nav-chat i {
+        cursor: pointer;
+    }
+    
+    .centered {
+        justify-content: center;
+        width: 10%;
+    }
+
+    .nav-chat input {
+        width: 80%;
+        padding: 10px;
+        font-size: 1rem;
+        border: 1px solid white;
+    }
+

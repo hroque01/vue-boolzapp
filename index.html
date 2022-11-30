@@ -10,15 +10,56 @@
     <link rel="stylesheet" href="style.css">
     <!-- Vuejs -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <title>Boolzapp</title>
 </head>
 <body>
     <div class="background-header"></div>
     <div class="background-main">
+        <!-- vuejs id#app -->
         <div id="app">
+
+            <!-- container boostrap -->
             <div class="container">
-                <div class="chat-app">
-                    
+                <div class="chat-app d-flex">
+
+                    <!-- made with bootstrap classes -->
+                    <!-- SidebaApp -->
+                    <div class="col-4 sidebar-app border-end">
+
+                        <div class="header-app">
+
+                        </div>
+                        <div class="notification">
+
+                        </div>
+                        <div class="search-bar">
+                            <div class="input-group p-2 d-flex justify-content-center align-items-center">
+                                <span class="search-icon border ">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                              </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ChatApp -->
+                    <div class="col-8">
+                        <div class="header-app">
+
+                        </div>
+                        <div class="conversation">
+
+                        </div>
+                        <div class="nav-chat">
+                            <i class="centered fa-regular fa-face-smile d-flex"></i>
+                            <input class="rounded" type="text" placeholder="Scrivi un messaggio">
+                            <i class="centered fa-solid fa-microphone d-flex"></i>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
