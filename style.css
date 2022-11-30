@@ -3,3 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.background-header {
+    background-color: #009688;
+    height: 15vh;
+    position: relative;
+}
+
+.background-main {
+    background-color: #d8dbd5;
+    height: 85vh;
+    position: relative;
+}
+
+.chat-app {
+    background-color: white;
+    height: 90vh;
+    position: relative;
+    top: -10vh;
+}
