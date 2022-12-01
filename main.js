@@ -168,8 +168,13 @@ const { createApp } = Vue;
                 ]
             }
         },
-            }
-            
+    
+    methods: {
+        selected(i){
+            this.userActive = i;
+        },  
+    }
+} 
 ).mount("#app")
 
    

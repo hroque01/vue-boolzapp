@@ -64,7 +64,7 @@
 
                         <!-- Sidebar Chat -->
                         <div class="chats">
-                            <div class="single-chat" v-for="person in contacts">
+                            <div class="single-chat" v-for="(person,i) in contacts" @click="selected(i)" :class="person.visible ? '' : 'd-none'">
                                 <div class="d-flex justify-content-between border p-3">
                                     <div class="d-flex">
                                         <img class="avatar-chat" :src="person.avatar" alt="">
@@ -95,7 +95,7 @@
                         <!-- Conversation -->
                         <div class="conversation">
                             <div class="d-flex flex-column p-5">
-                                <div v-for="msg in contacts[userActive].messages" :class="msg.status === 'sent' ? 'msg-sent' : 'received' ">{{ msg.message}}</div>
+                                <div v-for="msg in contacts[userActive].messages" :class="msg.status === 'sent' ? 'msg-sent' : 'received' ">{{msg.message}}</div>
                             </div>
                         </div>
 

@@ -91,6 +91,11 @@
     overflow: auto;
 }
 
+.single-chat:hover {
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+
 
 /* Chat */
 .conversation {
@@ -136,7 +141,7 @@
     align-items: center;
 }
 
-.sent {
+.msg-sent {
     max-width: 400px;
     padding: 10px;
     border-radius: 10px;
