@@ -56,9 +56,46 @@
     justify-content: center;
 }
 
+.fa-bell-slash{
+    color: #8edafc; 
+}
+
+.notifications-aLink {
+    font-size: 0.8rem;
+    color: #5d7494;
+}
+
+.avatar-chat { 
+    width: 55px;    
+    height: 55px;
+    border-radius: 40px; 
+}
+
+.header-side-icons{
+    color: #b1b1b1;
+}
+
+.info-chat {
+    display: flex;
+    flex-direction: column;
+    line-height: 5px;
+}
+
+.littleFont-LightGrey {
+    font-size: 13px;
+    color: #b7babc;
+}
+
+.chats {
+    height: 62vh;
+    overflow: auto;
+}
+
+
 /* Chat */
 .conversation {
     height: 68vh;
+    overflow: auto;
     background-image: url(img/mine.jpg);
 }
 
@@ -87,4 +124,34 @@
         font-size: 1rem;
         border: 1px solid white;
     }
+
+.bells-icon{
+    font-size: 20px;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sent {
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #d5f9ba;
+    align-self: end;
+    margin: 10px;
+}
+
+.received {
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    align-self: start;
+    margin: 10px;
+}
+
 
