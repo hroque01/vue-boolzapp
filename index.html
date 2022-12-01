@@ -95,14 +95,7 @@
                         <!-- Conversation -->
                         <div class="conversation">
                             <div class="d-flex flex-column p-5">
-                                <div class="sent">mandato</div>
-                                <div class="received">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis ipsum ad enim dolorem officiis optio debitis, est non sint adipisci, tenetur asperiores nam, quia veniam dolorum. Repudiandae dolor placeat laborum.</div>
-                                <div class="received">ricevuto</div>
-                                <div class="received">ricevuto</div>
-                                <div class="sent">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo in obcaecati saepe odit corrupti nemo, error earum ducimus exercitationem minima magni cumque consectetur sapiente sequi nisi delectus voluptates. Eos, illo.</div>
-                                <div class="sent">mandato</div>
-                                <div class="received">ricevuto</div>
-                                <div class="sent">mandato</div>
+                                <div v-for="msg in contacts[userActive].messages" :class="msg.status === 'sent' ? 'msg-sent' : 'received' ">{{ msg.message}}</div>
                             </div>
                         </div>
 
