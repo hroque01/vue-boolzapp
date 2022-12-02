@@ -102,7 +102,7 @@
                         <!-- Inputs chat -->
                         <div class="nav-chat">
                             <i class="centered fa-regular fa-face-smile d-flex"></i>
-                            <input class="rounded" type="text" placeholder="Scrivi un messaggio">
+                            <input class="rounded" type="text" placeholder="Scrivi un messaggio" v-model="newMessageSent.message" @keyUp="sentNewMessage()">
                             <i class="centered fa-solid fa-microphone d-flex"></i>
                         </div>
                     </div>

@@ -3,6 +3,10 @@ const { createApp } = Vue;
         data(){
             return{
                 userActive: 0,
+                newMessageSent: {
+                    message: '',
+                    status:''
+                },
                 contacts: [
                     {
                         name: 'Michele',
@@ -172,7 +176,21 @@ const { createApp } = Vue;
     methods: {
         selected(i){
             this.userActive = i;
-        },  
+        },
+
+        sentNewMessage() {
+            if (this.newMessageSent === '') {
+                return
+            }
+
+            this.userActive.messages.push ( {
+                date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
+				message: this.newMessageSent.message,
+				status: 'sent'
+            } )
+
+            this.newMessageSent.message = '';
+        }
     }
 } 
 ).mount("#app")
