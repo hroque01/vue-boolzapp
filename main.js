@@ -7,6 +7,7 @@ const { createApp } = Vue;
                     message: '',
                     status:''
                 },
+                error: false,
                 contacts: [
                     {
                         name: 'Michele',
@@ -179,17 +180,19 @@ const { createApp } = Vue;
         },
 
         sentNewMessage() {
-            if (this.newMessageSent === '') {
-                return
+            if (this.newMessageSent.length === '') {
+                this.error = true;
+            } else {
+                this.contacts[this.userActive].messages.push ( {
+                    date: new Date (),
+                    message: this.newMessageSent.message,
+                    status: 'sent'
+                } )
+
+                this.error = false;
+
+                this.newMessageSent.message = '';
             }
-
-            this.userActive.messages.push ( {
-                date: luxon.DateTime.now().toFormat('dd/MM/yyyy HH:mm:ss'),
-				message: this.newMessageSent.message,
-				status: 'sent'
-            } )
-
-            this.newMessageSent.message = '';
         }
     }
 } 
