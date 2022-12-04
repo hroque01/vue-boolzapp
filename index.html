@@ -58,13 +58,16 @@
                                 <span class="search-icon border ">
                                     <i class="fa-solid fa-magnifying-glass"></i>
                                 </span>
-                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-describedby="basic-addon1" v-model="searchContact"
+                                @keyup="findContact()">
+                                <!-- <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat" aria-describedby="basic-addon1" v-model="searchInChatList"> -->
                               </div>
                         </div>
 
                         <!-- Sidebar Chat -->
                         <div class="chats">
                             <div class="single-chat" v-for="(person,i) in contacts" @click="selected(i)" :class="person.visible ? '' : 'd-none'">
+                                <!-- <div class="single-chat" v-for="(person,i) in contacts" @click="selected(i)" :class="person.visible ? '' : 'd-none'" v-if="searchUser(i)"></div> -->
                                 <div class="d-flex justify-content-between border p-3">
                                     <div class="d-flex">
                                         <img class="avatar-chat" :src="person.avatar" alt="">
@@ -102,7 +105,7 @@
                         <!-- Inputs chat -->
                         <div class="nav-chat">
                             <i class="centered fa-regular fa-face-smile d-flex"></i>
-                            <input class="rounded" type="text" placeholder="Scrivi un messaggio" v-model="newMessageSent.message" @keyUp="sentNewMessage()">
+                            <input class="rounded" type="text" placeholder="Scrivi un messaggio" v-model="newMessageSent.message" @keyUp.enter="sentNewMessage">
                             <i class="centered fa-solid fa-microphone d-flex"></i>
                         </div>
                     </div>
