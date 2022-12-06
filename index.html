@@ -87,9 +87,9 @@
                         <!-- Header Side CHAT -->
                         <div class="header-app">
                             <div class="d-flex align-items-center ms-3 pt-1">
-                                <img class="avatar-chat" src="img/avatar_1.jpg" alt="">
+                                <img class="avatar-chat" :src="contacts[userActive].avatar" alt="">
                                 <div class="info-chat ms-3">
-                                    <h6>Michele</h6>
+                                    <h6>{{contacts[userActive].name}}</h6>
                                     <div class="littleFont-LightGrey">Ultimo accesso oggi alle 12:00</div>
                                 </div>
                             </div>
